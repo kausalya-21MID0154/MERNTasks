@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      h2 {
+        color: blue;
+        text-align: center;
+      }
+      table {
+        border-collapse: collapse;
+        border: 1px solid black;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      th {
+        text-align: center;
+        font-weight: bold;
+        padding: 8px;
+        border: 1px solid black;
+      }
+      td {
+        text-align: left;
+        padding: 8px;
+        border: 1px solid black;
+      }
+
+      input[type="text"],
+      input[type="password"],
+      input[type="email"],
+      select {
+        width: 100%;
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+      input[type="checkbox"] {
+        text-align: left;
+      }
+      input[type="submit"] {
+        text-align: center;
+      }
+      .centered {
+        text-align: center;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form>
+      <table>
+        <tr>
+          <th>First Name</th>
+          <td><input type="text" name="fname" /></td>
+        </tr>
+        <tr>
+          <th>Last Name</th>
+          <td><input type="text" name="lname" /></td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td><input type="email" name="email" /></td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td><input type="password" name="password" /></td>
+        </tr>
+        <tr>
+          <th>Re-enter Password</th>
+          <td><input type="password" name="repassword" /></td>
+        </tr>
+        <tr>
+          <th rowspan="2">Gender:</th>
+          <td><input type="radio" name="gender" value="male" /> Male</td>
+        </tr>
+        <tr>
+          <td><input type="radio" name="gender" value="female" /> Female</td>
+        </tr>
+        <tr>
+          <th>Age:</th>
+          <td><input type="text" name="age" /></td>
+        </tr>
+        <tr>
+          <th>Phone Number</th>
+          <td><input type="text" name="phone" /></td>
+        </tr>
+        <tr>
+          <th>Address</th>
+          <td><textarea name="address" rows="5" cols="40"></textarea></td>
+        </tr>
+        <tr>
+          <th>State</th>
+          <td><input type="text" name="state" /></td>
+        </tr>
+        <tr>
+          <th>Country</th>
+          <td>
+            <select name="country">
+              <option>Choose your country</option>
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="india">India</option>
+              <option value="usa">USA</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <th>Languages known</th>
+          <td>
+            <input type="checkbox" name="language" value="english" /> English
+            <input type="checkbox" name="language" value="kannada" /> Kannada
+            <input type="checkbox" name="language" value="hindi" /> Hindi
+            <input type="checkbox" name="language" value="telugu" /> Telugu
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <input type="checkbox" name="agree" required />
+            Hereby I declare all the given details are true
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" style="text-align: right">
+            Log in to <a href="https://www.ethnus.com/">Ethnus</a> website
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div class="centered">
+      <input type="submit" value="Register" />
+    </div>
+  </body>
+</html>

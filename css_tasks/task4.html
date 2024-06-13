@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hoverable Sidenav Buttons</title>
+    <style>
+      .sidenav {
+        position: fixed;
+        width: 100px;
+        padding-top: 20px;
+      }
+      .button {
+        display: block;
+        width: 95%;
+        padding: 10px;
+        text-align: center;
+        color: black;
+        position: relative;
+      }
+      .button1 {
+        background-color: #fd6ab4;
+      }
+      .button2 {
+        background-color: #33cc33;
+      }
+      .button3 {
+        background-color: #66cccc;
+      }
+      .button4 {
+        background-color: #ddeb4a;
+      }
+      .button .content {
+        display: none;
+        position: relative;
+        left: 50px;
+        width: 300px;
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ddd;
+      }
+      .button:hover .content {
+        display: block;
+      }
+      .content table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      .content th,
+      .content td {
+        border: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+      }
+      #main {
+        display: block;
+        text-align: center;
+        justify-content: space-between;
+        width: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidenav">
+      <a class="button button1"
+        >Firstname
+        <div class="content">
+          <table>
+            <tr>
+              <th>Firstname</th>
+              <td>Arjun</td>
+              <td>Ram</td>
+              <td>Siva</td>
+            </tr>
+          </table>
+        </div>
+      </a>
+      <a class="button button2"
+        >Lastname
+        <div class="content">
+          <table>
+            <tr>
+              <th>Lastname</th>
+              <td>Ravi</td>
+              <td>Jeevan</td>
+              <td>Kumar</td>
+            </tr>
+          </table>
+        </div>
+      </a>
+      <a class="button button3"
+        >Age
+        <div class="content">
+          <table>
+            <tr>
+              <th>Age</th>
+              <td>50</td>
+              <td>94</td>
+              <td>80</td>
+            </tr>
+          </table>
+        </div>
+      </a>
+      <a class="button button4"
+        >Gender
+        <div class="content">
+          <table>
+            <tr>
+              <th>Gender</th>
+              <td>Male</td>
+              <td>Male</td>
+              <td>Male</td>
+            </tr>
+          </table>
+        </div>
+      </a>
+    </div>
+    <div id="main">
+      <h2>Hoverable Sidenav Buttons</h2>
+      <p>Hover over the buttons in the left side navigation to open them.</p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .container {
+        display: inline-flex;
+        justify-content: space-around;
+        width: 45%;
+      }
+      .vertical-nav {
+        width: 200px;
+        height: 200px;
+        background-color: lightblue;
+        padding: 20px;
+      }
+      .vertical-nav-item {
+        text-align: center;
+        padding: 10px;
+        font-size: 16px;
+        color: blue;
+      }
+      .vertical-nav-item:hover {
+        background-color: orange;
+        color: white;
+      }
+      .horizontal-nav {
+        background-color: lightgray;
+        display: flex;
+        padding: 10px;
+        width: 350px;
+        height: 45px;
+      }
+      .horizontal-nav-item {
+        background-color: lightgray;
+        padding: 10px;
+        font-size: 16px;
+        color: blue;
+        border-top: 0px;
+        border-right: 1px solid blue;
+      }
+      .horizontal-nav-item:hover {
+        background-color: gray;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Vertical Navigation Bar and Horizontal Navigation Bar</h2>
+    <div class="container">
+      <div class="vertical-nav">
+        <div class="vertical-nav-item">Home</div>
+        <div class="vertical-nav-item">Java</div>
+        <div class="vertical-nav-item">CSS</div>
+        <div class="vertical-nav-item">HTML</div>
+        <div class="vertical-nav-item">Bootstrap</div>
+      </div>
+      <div class="horizontal-nav">
+        <div class="horizontal-nav-item">Home</div>
+        <div class="horizontal-nav-item">Java</div>
+        <div class="horizontal-nav-item">HTML</div>
+        <div class="horizontal-nav-item">CSS</div>
+      </div>
+    </div>
+  </body>
+</html>
