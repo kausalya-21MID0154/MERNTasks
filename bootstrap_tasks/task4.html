@@ -22,6 +22,19 @@
       .card-img-top {
         height: 200px;
         object-fit: cover;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .card-img-top.hover-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+      }
+      .card:hover .card-img-top.hover-img {
+        opacity: 1;
       }
       .card-body {
         padding: 1.5rem;
@@ -45,7 +58,6 @@
         transition: color 0.3s ease;
         text-transform: uppercase;
       }
-
       .card .card-action a:hover {
         color: #ffd8a6;
         text-decoration: none;
@@ -61,11 +73,18 @@
       <div class="row row-cols-1 row-cols-md-4 g-4">
         <div class="col">
           <div class="card h-100">
-            <img
-              src="https://picsum.photos/id/237/400/300"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img
+                src="https://picsum.photos/id/25/400/300"
+                class="card-img-top"
+                alt="Card Image"
+              />
+              <img
+                src="https://picsum.photos/id/237/400/300"
+                class="card-img-top hover-img"
+                alt="Card Image"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">PETS</h5>
               <div class="card-content">
@@ -85,11 +104,18 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="https://picsum.photos/id/152/400/300"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img
+                src="https://picsum.photos/id/25/400/300"
+                class="card-img-top"
+                alt="Card Image"
+              />
+              <img
+                src="https://picsum.photos/id/152/400/300"
+                class="card-img-top hover-img"
+                alt="Card Image"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">FLOWERS</h5>
               <div class="card-content">
@@ -112,11 +138,18 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="https://picsum.photos/id/171/400/300"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img
+                src="https://picsum.photos/id/25/400/300"
+                class="card-img-top"
+                alt="Card Image"
+              />
+              <img
+                src="https://picsum.photos/id/171/400/300"
+                class="card-img-top hover-img"
+                alt="Card Image"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">PHOTOGRAPHY</h5>
               <div class="card-content">
@@ -143,11 +176,18 @@
         </div>
         <div class="col">
           <div class="card h-100">
-            <img
-              src="https://picsum.photos/id/312/300/200"
-              class="card-img-top"
-              alt="Card Image"
-            />
+            <div class="position-relative">
+              <img
+                src="https://picsum.photos/id/25/300/200"
+                class="card-img-top"
+                alt="Card Image"
+              />
+              <img
+                src="https://picsum.photos/id/312/300/200"
+                class="card-img-top hover-img"
+                alt="Card Image"
+              />
+            </div>
             <div class="card-body">
               <h5 class="card-title">HONEY</h5>
               <div class="card-content">
