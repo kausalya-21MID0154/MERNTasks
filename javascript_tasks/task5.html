@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 5</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+      }
+      .form-group {
+        display: flex;
+        align-items: start;
+        margin-bottom: 20px;
+      }
+      .form-group label {
+        width: 100px;
+      }
+      input[type="text"],
+      textarea {
+        width: 30%;
+        padding: 12px 20px;
+        margin-left: 10px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+      }
+      .error {
+        color: red;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="contactForm" onsubmit="return handleSubmit()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required />
+        <span class="error">This field is required</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email" required />
+        <span class="error">A valid email address is required</span>
+      </div>
+      <div class="form-group">
+        <label for="website">Website:</label>
+        <input type="text" id="website" name="website" required />
+        <span class="error">A valid url is required</span>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        <span class="error">This field is required</span>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+      function handleSubmit() {
+        const name = document.getElementById("name").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const website = document.getElementById("website").value.trim();
+        const message = document.getElementById("message").value.trim();
+        if (!name || !email || !website || !message) {
+          alert("Please fill in all required fields.");
+          return false;
+        }
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Website:", website);
+        console.log("Message:", message);
+        document.getElementById("contactForm").reset();
+        return false;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to bottom, #f4d171, #be7ce7);
+        text-align: center;
+      }
+      label {
+        font-weight: bold;
+      }
+      p {
+        text-align: right;
+      }
+      form {
+        background: none;
+        padding: 20px;
+        max-width: 500px;
+        margin: 20px auto;
+        text-align: left;
+      }
+      h2 {
+        text-align: center;
+        color: #0000ff;
+      }
+      input[type="text"],
+      input[type="number"],
+      input[type="tel"],
+      input[type="email"],
+      input[type="password"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        box-sizing: border-box;
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .form-group {
+        margin-bottom: 10px;
+        position: relative;
+      }
+      .form-group span.error {
+        color: red;
+        font-weight: bold;
+        position: absolute;
+        right: 0;
+        top: 10px;
+      }
+      .form-group.gender {
+        display: flex;
+        align-items: center;
+      }
+      .form-group.gender label {
+        margin-right: 10px;
+        margin-bottom: 0;
+      }
+      .form-group.gender input {
+        margin-left: 5px;
+      }
+      button {
+        background-color: #ff0000;
+        color: #ffffff;
+        padding: 10px 20px;
+        border: 10px;
+        cursor: pointer;
+        display: block;
+        width: 100%;
+      }
+      a {
+        color: #0000ff;
+      }
+      .declaration {
+        display: flex;
+        align-items: center;
+        margin-top: 20px;
+      }
+      .declaration label {
+        margin-left: 5px;
+      }
+      .languages {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .languages label {
+        margin-right: 10px;
+        margin-top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="registrationForm">
+      <h2>Registration form</h2>
+      <div class="form-group">
+        <label for="firstName">First Name</label>
+        <input type="text" id="firstName" name="firstName" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="lastName">Last Name</label>
+        <input type="text" id="lastName" name="lastName" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="confirmPassword">Re-enter Password</label>
+        <input
+          type="password"
+          id="confirmPassword"
+          name="confirmPassword"
+          required
+        />
+        <span class="error">POOR OR MISMATCH</span>
+      </div>
+      <div class="form-group gender">
+        <label>Gender</label>
+        <input type="radio" id="male" name="gender" value="male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+      </div>
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="phoneNumber">Phone Number</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" required></textarea>
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="state">State</label>
+        <input type="text" id="state" name="state" required />
+        <span class="error">POOR</span>
+      </div>
+      <div class="form-group">
+        <label for="country">Country</label>
+        <select id="country" name="country" required>
+          <option value="">Choose your country</option>
+          <option value="usa">USA</option>
+          <option value="canada">Canada</option>
+          <option value="uk">UK</option>
+        </select>
+      </div>
+      <div class="form-group languages">
+        <label>Languages known</label>
+        <input
+          type="checkbox"
+          id="english"
+          name="languages[]"
+          value="english"
+        />
+        <label for="english">English</label>
+        <input
+          type="checkbox"
+          id="kannada"
+          name="languages[]"
+          value="kannada"
+        />
+        <label for="kannada">Kannada</label>
+        <input type="checkbox" id="hindi" name="languages[]" value="hindi" />
+        <label for="hindi">Hindi</label>
+        <input type="checkbox" id="telugu" name="languages[]" value="telugu" />
+        <label for="telugu">Telugu</label>
+      </div>
+      <div class="form-group declaration">
+        <input type="checkbox" id="declaration" name="declaration" required />
+        <label for="declaration"
+          >Hereby I declare all the given details are true</label
+        >
+      </div>
+      <p>Log in to <a href="#">Ethnus website</a></p>
+      <button type="submit">REGISTER</button>
+    </form>
+    <script>
+      const form = document.getElementById("registrationForm");
+      const fields = form.querySelectorAll("input, textarea, select");
+      fields.forEach((field) => {
+        field.addEventListener("input", function () {
+          const errorSpan = this.parentElement.querySelector(".error");
+          if (this.checkValidity()) {
+            errorSpan.style.display = "none";
+          } else {
+            errorSpan.style.display = "block";
+          }
+          if (this.id === "confirmPassword") {
+            const password = document.getElementById("password").value;
+            if (this.value !== password) {
+              errorSpan.textContent = "POOR OR MISMATCH";
+              errorSpan.style.display = "block";
+            } else {
+              errorSpan.style.display = "none";
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

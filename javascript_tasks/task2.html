@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Task 2</title>
+  </head>
+  <body>
+    <h1>Alphabetical Order of a String</h1>
+    <input type="text" id="stringInput" placeholder="Enter a string" />
+    <button onclick="displayAlphabeticalOrder()">Sort</button>
+    <p id="result"></p>
+    <script>
+      function alphabeticalOrder(str) {
+        let charArray = str.split("");
+        charArray.sort();
+        let sortedStr = charArray.join("");
+        return sortedStr;
+      }
+      function displayAlphabeticalOrder() {
+        let inputString = document.getElementById("stringInput").value;
+        let sortedString = alphabeticalOrder(inputString);
+        document.getElementById("result").textContent =
+          "Alphabetical Order: " + sortedString;
+      }
+    </script>
+  </body>
+</html>
